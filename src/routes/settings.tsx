@@ -43,7 +43,7 @@ function SettingsPage() {
                 <p className="font-medium">{o.label}</p>
                 <p className="text-sm text-muted-foreground">{o.desc}</p>
               </div>
-              <Toggle on={prefs[o.key]} onClick={() => setPrefs({ ...prefs, [o.key]: !prefs[o.key] })} />
+              <Toggle on={!!prefs[o.key]} onClick={() => setPrefs({ ...prefs, [o.key]: !prefs[o.key] })} />
             </div>
           ))}
           <div className="flex items-center justify-between gap-4 p-4">
